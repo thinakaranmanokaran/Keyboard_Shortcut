@@ -28,20 +28,18 @@ export default function App() {
                 e.key !== "Alt" &&
                 e.key !== "Meta"
             ) {
-                const mainKey = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-                keysSet.add(mainKey);
+                const mainKey = e.key.toLowerCase();
+                if (!["control", "shift", "alt", "meta"].includes(mainKey)) {
+                    keysSet.add(mainKey);
+                    keySequence += mainKey;
 
-                // Append key to sequence
-                keySequence += mainKey;
+                    if (keySequence.includes("thinakaran") || keySequence.includes("dheena")) {
+                        window.open("https://thinakaran.dev", "_blank");
+                        keySequence = "";
+                    }
 
-                // Check for Easter egg
-                if (keySequence.includes("thinakaran") || keySequence.includes("dheena")) {
-                    window.open("https://thinakaran.dev", "_blank");
-                    keySequence = ""; // reset after triggering
+                    if (keySequence.length > 20) keySequence = keySequence.slice(-20);
                 }
-
-                // Keep sequence short to avoid memory bloat
-                if (keySequence.length > 20) keySequence = keySequence.slice(-20);
             }
 
             setLastKey(Array.from(keysSet).join("+"));
@@ -84,7 +82,7 @@ export default function App() {
                     href="https://www.npmjs.com/package/keyboard-shortcutx"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl underline text-black hover:text-white hover:bg-blue-400 px-4 py-2 rounded-xl transition-all duration-300"
+                    className="text-xl underline text-black hover:shadow-[3px_3px_0px] border-2   bg-blue-400 px-4 py-2 rounded-xl transition-all duration-300"
                 >
                     Package
                 </a>
@@ -92,16 +90,15 @@ export default function App() {
 
             <button
                 disabled={!enabled}
-                className={`px-8 py-4 text-xl font-bold rounded-lg border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all duration-150 ${
-                    enabled
+                className={`px-8 py-4 text-xl font-bold rounded-lg border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all duration-150 ${enabled
                         ? "bg-pink-500 hover:bg-pink-600 text-white"
                         : "bg-gray-400 text-gray-900 cursor-not-allowed"
-                }`}
+                    }`}
             >
                 {enabled ? "I am Enabled ✅" : "I am Disabled ❌"}
             </button>
 
-            <p className="mt-12 text-center text-black font-semibold flex space-x-6">
+            <p className="mt-12 text-center text-black font-semibold flex-col space-y-4 md:space-y-0 md:flex-row flex space-x-6 ">
                 <span className="bg-[#FFEB55] p-4 border-2 rounded-lg shadow-[4px_4px_0px] shadow-black">
                     Press <b>Ctrl+K</b> to toggle the button <br />
                 </span>
