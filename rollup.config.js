@@ -1,22 +1,21 @@
-import { defineConfig } from "rollup";
 import terser from "@rollup/plugin-terser";
 
-export default defineConfig([
+export default [
     {
         input: "src/index.js",
         output: [
-            { file: "dist/index.mjs", format: "esm" },
-            { file: "dist/index.cjs", format: "cjs" }
+            { file: "dist/index.cjs.js", format: "cjs" },
+            { file: "dist/index.mjs", format: "es" }
         ],
         plugins: [terser()]
     },
     {
         input: "src/react.js",
         output: [
-            { file: "dist/react.mjs", format: "esm" },
-            { file: "dist/react.cjs", format: "cjs" }
+            { file: "dist/react.cjs.js", format: "cjs" },
+            { file: "dist/react.mjs", format: "es" }
         ],
-        external: ["react"], // don’t bundle React
+        external: ["react"],
         plugins: [terser()]
     }
-]);
+];
