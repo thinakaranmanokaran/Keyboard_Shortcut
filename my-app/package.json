@@ -1,13 +1,37 @@
 {
-  "name": "my-app",
-  "private": true,
-  "version": "0.0.0",
+  "name": "keyboard-shortcutx-demo",
+  "version": "0.1.0",
+  "private": false,
   "type": "module",
+  "description": "Keyboard ShortcutX demo app: lightweight, dependency-free keyboard shortcut & hotkey manager for React and JavaScript, showing pressed keys in real-time.",
+  "author": {
+    "name": "Thinakaran Manokaran",
+    "email": "thinakaran.manohar@gmail.com",
+    "url": "https://thinakaran.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://thinakaranmanokaran.github.io/Keyboard_Shortcut/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinakaranmanokaran/Keyboard_Shortcut"
+  },
+  "keywords": [
+    "keyboard shortcut",
+    "hotkey manager",
+    "react hook",
+    "javascript shortcuts",
+    "keybinding library",
+    "keyboard events",
+    "keyboard-shortcutx",
+    "shortcut demo",
+    "keyboard shortcuts visualizer",
+    "react keyboard manager"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
