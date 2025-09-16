@@ -1,7 +1,19 @@
-# ⌨️ keyboard-shortcutx
+# keyboard-shortcutx
 
-**Lightweight, dependency-free keyboard shortcut & hotkey manager for JavaScript and React.**
+<p align="center">
+  <a href="https://thinakaranmanokaran.github.io/Keyboard_Shortcut/">
+    <img src="https://thinakaranmanokaran.github.io/Keyboard_Shortcut/favicon512.png" 
+         alt="keyboard-shortcutx logo" 
+         width="256" 
+         height="258" />
+  </a>
+</p>
+
+
+<p align="center">
+Lightweight, dependency-free keyboard shortcut & hotkey manager for JavaScript and React.  
 ESM-first, tiny footprint, and designed for modern apps.
+</p>
 
 ---
 
@@ -13,6 +25,12 @@ ESM-first, tiny footprint, and designed for modern apps.
 * 🪝 **React hook support** for component-level shortcuts
 * 📦 **ESM-first** build with CommonJS fallback
 * ✅ **Tested with JSDOM + Vitest**
+
+---
+
+## 🚀 Preview
+
+[<img src="https://thinakaranmanokaran.github.io/Keyboard_Shortcut/preview.png" alt="keyboard-shortcutx preview" />](https://thinakaranmanokaran.github.io/Keyboard_Shortcut/)
 
 ---
 
@@ -124,6 +142,7 @@ Example: `ctrl+shift+s`, `alt+h`, `meta+enter`
 * [GitHub Repository](https://github.com/thinakaranmanokaran/Keyboard_Shortcut)
 * [NPM Package](https://www.npmjs.com/package/keyboard-shortcutx)
 * [Portfolio](https://thinakaran.dev)
+* [Live Demo](https://thinakaranmanokaran.github.io/Keyboard_Shortcut/)
 
 ---
 
@@ -135,7 +154,15 @@ Contributions are welcome! Please open issues and pull requests on [GitHub](http
 
 ## 📜 License
 
-MIT © [Thinakaran Manokaran](https://thinakaran.dev)
+[MIT License](/LICENSE)
+
+---
+
+## 👤 Author
+
+[Thinakaran Manokaran](https://thinakaran.dev)
+
+Portfolio : [thinakaran.dev](https://thinakaran.dev)
 
 ---
 

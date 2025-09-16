@@ -65,7 +65,7 @@ export default function App() {
                 <div className="text-3xl font-mono font-black text-white bg-[#FF5F00] py-4 px-8 rounded-lg shadow-[6px_6px_0_0_rgba(0,0,0,1)] border-4 border-black mb-6">
                     {lastKey}
                 </div>
-                <a href="https://www.npmjs.com/package/keyboard-shortcutx" target="_blank" rel="noopener noreferrer" className="text-xl underline hover:bg-blue-400 px-4 py-2 rounded-xl transition-all duration-300 ">Package</a>
+                <a href="https://www.npmjs.com/package/keyboard-shortcutx" target="_blank" rel="noopener noreferrer" className="text-xl underline text-black hover:text-white hover:bg-blue-400 px-4 py-2 rounded-xl transition-all duration-300 ">Package</a>
             </div>
 
             <button
